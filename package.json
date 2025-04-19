@@ -2,10 +2,12 @@
 	"name": "lucky-term-181e",
 	"version": "0.0.0",
 	"private": true,
+	"type": "module",
 	"scripts": {
 		"postinstall": "bun x wrangler secrets-store secret create 7e285b055874445193b7decdd19c1d27 --name SUPER_DUPER_SECRET --scopes workers --value mysecret",
 		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
+		"dev:wrangler": "wrangler dev",
+		"dev:vite": "vite dev",
 		"start": "wrangler dev",
 		"test": "vitest",
 		"cf-typegen": "wrangler types"
@@ -16,5 +18,9 @@
 		"typescript": "^5.5.2",
 		"vitest": "~3.0.7",
 		"wrangler": "^4.12.0"
+	},
+	"dependencies": {
+		"@cloudflare/vite-plugin": "^1.0.8",
+		"vite": "^6.3.2"
 	}
 }
