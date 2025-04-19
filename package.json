@@ -3,6 +3,7 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
+		"postinstall": "bun x wrangler secrets-store secret create 7e285b055874445193b7decdd19c1d27 --name SUPER_DUPER_SECRET --scopes workers --value mysecret",
 		"deploy": "wrangler deploy",
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
