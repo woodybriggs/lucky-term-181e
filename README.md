@@ -5,5 +5,5 @@
 for minimal working example without vite
 `[pkmgr] run dev:wrangler`
 
-for minimal working example with vite
+for minimal non working example with vite
 `[pkmgr] run dev:vite`
